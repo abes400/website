@@ -1,0 +1,53 @@
+{
+    "metadata": {
+        "name": "Bomberbot",
+        "desc": "A simple Bomberman Clone made with Unity3D."
+    },
+
+    "info": [
+        {
+            "type": "text",
+            "content": "Bomberbot is a classical Bomberman game with 3D graphics and a futuristic theme."
+        },
+        {
+            "type": "img",
+            "name": "artwork.png",
+            "alt": "Bomberbot holding a bomb against his enemy, who is frightened."
+        },
+        {
+            "type": "text",
+            "content": "One day, <b>Bomberbot</b> sees his garden crowded with evil <b>Pestobots</b>. If he doesn't do anything, they will ruin the peace of the garden."
+        },
+        {
+            "type":"text",
+            "content": "Your main goal is to get rid of the Pestobots by planning <b>bombs</b> near them. After eliminating all the Pestobots in each level, you'll be able to advance to the next one."
+        },
+        {
+            "type": "img",
+            "name": "gameplay.png",
+            "alt": "Gameplay of Bomberbot."
+        },
+        {
+            "type": "list",
+            "title": "Controls",
+            "items": [
+                "<b>Arrow keys</b>: Move",
+                "<b>Spacebar</b>: Plant bomb",
+                "<b>Esc</b>: Pause"
+            ]
+        }
+    ],
+
+    "extras": {
+        "about": {
+            "techstack": ["Unity3D", "C#"],
+            "license": "GPL-3.0",
+            "version": "1.0"
+        },
+        "releases": {
+            "Windows": "https://github.com/abes400/Bomberbot/releases/download/Windows/Install_Bomberbot_v1_0_Gaming_PCs.exe",
+            "macOS": "https://github.com/abes400/Bomberbot/releases/download/macOS/Bomberbot_v1_0.dmg"
+        }
+
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "metadata": {
+        "name": "Radio Atılım Statistics Monitor",
+        "desc": "A utility developed for RADIO ATILIM to show streaming statistics."
+    },
+
+    "info": [
+        {
+            "type": "text",
+            "content": "Radio Atılım Statistics Monitor is a utility developed for RADIO ATILIM to show streaming statistics."
+        },
+        {
+            "type": "list",
+            "title": "Features",
+            "items": [
+                "Sleek Neumorphic GUI providing a professional look and feel",
+                "Statistics updated real-time and recorded on timelines (Max. 120 records per timeline)",
+                "A timeline manager which lists each timeline chronologically and allows you to preview them",
+                "Double-click on the title of the songs and listen them on Radio Atılım's Website"
+            ]
+        },
+        {
+            "type": "img",
+            "name": "photo.png",
+            "alt": "GUI of Radio Atılım Statistics Monitor."
+        }
+        
+    ],
+
+    "extras": {
+        "about": {
+            "techstack": ["Vue.js", "HTML", "CSS", "JavaScript", "Node.js", "Electron.js"],
+            "license": "MIT",
+            "version": "1.1.0"
+        },
+        "releases": {
+            "Windows": "https://github.com/abes400/radio-atilim-stats/releases/download/1.1.0/Radio-Atilim-Stats-Setup-1.1.0.exe",
+            "macOS": "https://github.com/abes400/radio-atilim-stats/releases/download/1.1.0/Radio-Atilim-Stats-1.1.0-universal.dmg"
+        }
+
+    }
+}

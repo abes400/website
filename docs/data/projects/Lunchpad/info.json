@@ -1,0 +1,50 @@
+{
+    "metadata": {
+        "name": "Lunchpad",
+        "desc": "A Lauchpad/Soundboard application using a specified repository system."
+    },
+
+    "info": [
+        {
+            "type": "text",
+            "content": "Lunchpad is a virtual soundboard application written in <b>Java</b> using <b>Swing</b> and <b>Sound API</b>. You can import <b>.wav</b> files or record your own voice and assign those audio clips to the keys on your keyboard. When a key is pressed, the audio clip assigned to that key will start playing."
+        },
+        {
+            "type": "img",
+            "name": "photo.png",
+            "alt": "Main GUI of Lunchpad."
+        },
+        {
+            "type": "list",
+            "title": "Features",
+            "items": ["Import pre-created repositories with keys already assigned.", "Record voice from microphone with Recorder"]
+        },
+        {
+            "type": "img",
+            "name": "rec.png",
+            "alt": "Recorder GUI of Lunchpad."
+        },
+        {
+            "type": "text",
+            "content": "When a sound key is pressed repeatedly:"
+        },
+        {
+            "type": "list",
+            "title": "",
+            "items": ["Shift key held: restart sound", "Shift key not held: start a new instance of the sound"]
+        }
+    ],
+
+    "extras": {
+        "about": {
+            "techstack": ["Java", "Swing"],
+            "license": "GPL-3.0",
+            "version": "1.2"
+        },
+        "releases": {
+            "macOS": "https://github.com/abes400/Lunchpad/releases/download/v1.2/Lunchpad.dmg",
+            "Java": "https://github.com/abes400/Lunchpad/releases/download/v1.2/Lunchpad.jar"
+        }
+
+    }
+}

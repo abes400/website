@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title id="tabtitle">Project Details - ABES400</title>
+        <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <div id="header"></div>
+        <main>
+            <div class="page">
+                <div class="title card scalable" id="projtitle"></div>
+
+                <div class="detail-container scalable">
+                    <div class="card info" id="projinfo"></div>
+                    <div class="card extras">
+                        
+                        <div class="sect">
+                            <h4 style="margin-bottom: 10px;">Download</h4>
+                            <div id="download-links"></div>
+                        </div>
+
+                        <hr>
+
+                        <div class="sect" style="margin-top: 10px;" id="about"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </main>
+        <div id="footer"></div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const id = new URLSearchParams(window.location.search).get('detail');
+        const pathprefix = `./data/projects/${id}`
+        fetch(`${pathprefix}/info.json`)
+        .then((response) => {
+            if(response.status === 404) {
+                window.location.href = './404.html';
+                return;
+            } else if (response.ok) return response.json();
+        })
+        .then(info => {
+            const metadata = info.metadata;
+            document.getElementById('tabtitle').innerHTML = `${metadata.name} - ABES400`
+            document.getElementById('projtitle').innerHTML = `
+                <div style="width: calc(100% - 160px)">
+                    <h2>${metadata.name}</h2>
+                    ${metadata.desc}
+                </div>
+                <a target="_blank" href="https://github.com/abes400/${id}"
+                    style="width: 140px; margin-left: 15px;"
+                    class="icontext"
+                    aria-tag="Visit GitHub to see the source code"
+                    >
+                        <icon>V</icon> &nbsp; Source Code
+                </a>  
+            `
+
+            let infoDOM = '';
+
+            info.info.forEach(item => {
+                switch(item.type) {
+                    case 'text':
+                        infoDOM += item.content + '<br><br>';
+                        break;
+                    case 'img':
+                        infoDOM += `<img src="${pathprefix}/${item.name}">`
+                        break;
+                    case 'list':
+                        infoDOM += `<h3>${item.title}</h3><ul>`;
+                        item.items.forEach(bullet => { infoDOM += `<li>${bullet}</li>`});
+                        infoDOM += '</ul>';
+                        break;
+                    default: console.log('Unknown case');
+                }
+            });
+
+            document.getElementById('projinfo').innerHTML = infoDOM;
+
+            let aboutDOM = '';
+
+            aboutDOM += `
+                <h5>Version</h5>
+                <p>${info.extras.about.version}<br></p>
+                <br>
+                <h5>License</h5>
+                <p>${info.extras.about.license}<br></p>
+                <br>
+                <h5>Techstack</h5>
+                <p>
+            `
+
+            info.extras.about.techstack.forEach(tech => { aboutDOM += `${tech} `});
+
+            document.getElementById('about').innerHTML = aboutDOM;
+
+            let downloadDOM = `<h5 class="vtag">v${info.extras.about.version}</h5>`;
+            let dlModes = {Windows: 'w', macOS: 'h', Java: '?', Linux: 'J'};
+            Object.keys(info.extras.releases).forEach(release => {
+                const link = info.extras.releases[release];
+                const icon = dlModes[release];
+                downloadDOM += `
+                    <a aria-tag="Download for ${release}." href="${link}"> 
+                        <icon>${icon}</icon> &nbsp; ${release} 
+                    </a>
+                `
+            });
+
+            document.getElementById('download-links').innerHTML = downloadDOM;
+        });
+    });
+
+</script>
+
+<style>
+    .card { margin: 20px; }
+
+    .title {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    ul { margin-left: 20px; }
+
+    .detail-container {
+        height: 100%;
+
+        .info {
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            padding: 30px;
+        }
+
+        .extras {
+
+            display: flex;
+            flex-direction: column;
+
+            .sect {
+                width: 100%;
+                height: auto;
+                padding: none;
+                position: relative;
+                margin-bottom: 20px;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    background-color: #AE490B;
+                    box-shadow: 0px 2px 2px #00000067;
+                    color: white;
+                    padding: 6px;
+                    margin-bottom: 10px;
+                    width: 100%;
+                    border-radius: 5px;
+                }
+
+                .vtag {
+                    background-color: #5d5d5d;
+                    color: white;
+                    padding: 5px 15px 5px 15px;
+                    margin-bottom: 10px;
+                    border-radius: 5px;
+
+                    position: absolute;
+                    top: -5px;
+                    right: 0;
+                    height: 30px;
+
+                }
+            }
+        }
+    }
+
+    @media (orientation: landscape) and (min-width: 900px) {
+        .detail-container {
+            display: flex;
+
+            .info {width: calc(100% - 250px);}
+
+            .extras {width: 250px;}
+        }
+
+        .card { margin: 10px; }
+
+    }
+</style>

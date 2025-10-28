@@ -1,0 +1,160 @@
+@media(orientation: portrait) and (pointer: coarse),
+     (orientation: portrait) and (pointer: none) {
+    .scalable {zoom: 1.8;}
+}
+
+@media(orientation: landscape), (pointer: fine) {
+    
+}
+
+a {
+    text-decoration: none;
+    color: #ae490a;
+    border-radius: 5px;
+}
+
+.page a:hover {
+    background-color: #c96c32 !important;
+    color: white;
+}
+
+.icontext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: auto;
+    width: 150px;
+}
+
+.icontext:hover {
+    background-color: #c96c32 !important;
+    color: white;
+}
+
+.nav404 {
+    a {
+        padding: 10px;
+        height: 20px;
+    } 
+}
+
+body {
+    background-image: url('../assets/homebg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+main { 
+    min-height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Primary';
+    box-sizing: border-box;
+}
+
+.topbottom {
+    width: 100%;
+    background-color: #424242;
+    display: flex;
+    
+    align-items: center;
+
+
+    a {
+        padding: 8px;
+        color:  white;
+        border-radius: 5px;
+    }
+
+    a:visited {
+        text-decoration: none !important;
+        font-weight: bold;
+        color: white;
+        
+    }
+}
+
+icon {
+    font-family: 'Social';
+    font-size: 20pt;
+}
+
+header {
+    position: relative;
+    height: 50px;
+    box-shadow: 0px 5px 5px #00000049;
+    justify-content: center;
+
+    a:hover {
+        background-color: #727272;
+        box-shadow: 0px 5px 5px #00000070;
+    }
+}
+
+footer {
+    height: 100px;
+    box-shadow: 0px -5px 5px #00000070;
+    padding-left: 60px;
+    padding-right: 30px;
+
+    position: relative;
+    color: #b0b0b0 !important;
+
+    font-size: 10pt;
+
+    a { color: #ffffff !important; }
+}
+
+.page {
+    margin: 20px;
+    width: calc(100% - 40px);
+    max-width: 1000px;
+    margin: 20px auto;
+    min-height: 100vh;
+}
+
+.card {
+    background-color: whitesmoke;
+    box-shadow: 0px 5px 8px #00000070;
+    padding: 10px;
+    outline: 3px solid whitesmoke;
+    border: 1px dashed #c3c3c3;
+    height: 100%;
+}
+
+
+
+@font-face {
+  font-family: 'Marker';
+  src: url('../assets/BlackRavens.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Primary';
+  src: url('../assets/GillSans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Primary';
+  src: url('../assets/GillSansHeavy.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Social';
+  src: url('../assets/smedia.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}

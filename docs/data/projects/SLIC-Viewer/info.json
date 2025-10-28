@@ -1,0 +1,45 @@
+{
+    "metadata": {
+        "name": "SLIC Viewer",
+        "desc": "An image viewer application demonstrating the Image Compression format I've created."
+    },
+
+    "info": [
+        {
+            "type": "text",
+            "content": "SLIC Viewer is a <b>Java Swing</b> application implementing the experimental Image Compression/Decompression Algorithm: <b>Squares and Lines Image Compression</b> (<b>SLIC</b>)"
+        },
+        {
+            "type":"text",
+            "content": "It can take bitmap images and compress them into SLIC file using the CODEC I implemented. The format is experimental."
+        },
+        {
+            "type": "img",
+            "name": "photo.png",
+            "alt": "Main GUI of SLIC Viewer."
+        },
+        {
+            "type": "list",
+            "title": "Features",
+            "items": [
+                "View BITMAP images",
+                "View SLIC images" ,
+                "Compress BITMAP images into SLIC images",
+                "Decompress SLIC images into BITMAP images"
+            ]
+        }
+    ],
+
+    "extras": {
+        "about": {
+            "techstack": ["Java", "Swing"],
+            "license": "GPL-3.0",
+            "version": "1.0"
+        },
+        "releases": {
+            "macOS": "https://github.com/abes400/SLIC-Viewer/releases/download/1.0/SLIC_Viewer.dmg",
+            "Java": "https://github.com/abes400/SLIC-Viewer/releases/download/1.0/SLIC_Viewer.jar"
+        }
+
+    }
+}

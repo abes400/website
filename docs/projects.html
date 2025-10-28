@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Projects - ABES400</title>
+        <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon.ico">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <div id="header"></div>
+        <main>
+            <div class="page">
+                <p class="title card scalable" style="text-align: center;">
+                        <strong>Selected Projects</strong><br>
+                        Here you will find some of my personal projects which are my favourite.
+
+                        <a class="icontext" target="_blank" href="https://github.com/abes400?tab=repositories"aria-tag="Visit GitHub to see all projects">
+                            See more on GitHub
+                        </a> 
+                </p>
+
+                <div class="grid" id="project-grid"></div>
+            </div>
+        </main>
+        <div id="footer"></div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch('./data/projects.json')
+        .then(response => response.json())
+        .then(projects => {
+            const projectGrid = document.getElementById('project-grid');
+            let projectDOM = '';
+
+            Object.keys(projects).forEach((id) => {
+                const project = projects[id];
+                projectDOM += `
+                    <a class="proj scalable" href="./project.html?detail=${id}">
+                        <div class="proj-content">
+                            <img src="./data/projects/${id}/photo.png" alt="${project.alt}">
+                            <div class="proj-title">
+                                <h4>${project.name}</h4>
+                                ${project.desc}
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="proj-foot"></div>
+                    </a>  
+                `
+            });
+
+            
+            projectGrid.innerHTML = projectDOM;
+            
+        })
+    
+    });
+</script>
+
+
+<style>
+    .grid {
+        width: 100%;
+
+        display: block;
+        margin-top: 20px;
+
+        @media (orientation: landscape) and (min-width: 600px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+
+            .proj {
+                margin: 0 !important;
+                height: 260px !important;
+                
+
+                img {
+                    width: 100% !important;
+                    height: 167px !important;
+                }
+
+                .proj-title {
+                    width: 100% !important;
+
+                    height: calc(100% - 167px);
+                    mask-image: linear-gradient(to bottom, black 0, black calc(100% - 45px), transparent 100%);
+                    mask-repeat: no-repeat;
+
+                    -webkit-mask-image: linear-gradient(to bottom, black 0, black calc(100% - 45px), transparent 100%);
+                    -webkit-mask-repeat: no-repeat;
+
+                    padding-left: 0 !important;
+                }
+
+                .proj-content{
+                    display: block !important;
+                }
+
+            }
+        }
+
+        @media (min-width: 900px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        
+        .proj {
+
+            margin-bottom: 10px;
+            height: 150px;
+
+            background-color: whitesmoke;
+            box-shadow: 0px 3px 5px #0000007e;
+
+            display: flex;
+            overflow: hidden;
+            color: black !important;
+
+            position: relative;
+
+            img {
+                width: 200px;
+                height: 100%;
+                
+                object-fit: cover;
+                object-position: top;
+
+                background-color: #d7d7d7;
+            }
+
+            .proj-title {
+                width: calc(100% - 200px);
+                font-size: 12pt;
+                overflow: hidden;
+                padding-left: 10px;
+            }
+
+            .proj-foot {
+                background-color: #AE490B;
+                width: 100%;
+                height: 5px;
+                position: absolute;
+                bottom: 0;
+            }
+
+            .proj-content {
+                width: 100%;
+                height: calc(100% - 5px);
+                display: flex;
+                overflow: hidden;
+                padding: 10px;
+            }
+
+        }
+
+        .proj:hover {
+            background-color: #ffe0cd !important;
+            box-shadow: 0px 5px 8px #0000007e !important;
+            img {
+                background-color: #fcd6bf;
+            }
+        }
+    }
+
+    .page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+            max-width: 500px;
+            width: 100%;
+        }
+    }
+</style>
