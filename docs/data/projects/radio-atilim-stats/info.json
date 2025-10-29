@@ -34,9 +34,8 @@
             "version": "1.1.0"
         },
         "releases": {
-            "Windows": "https://github.com/abes400/radio-atilim-stats/releases/download/1.1.0/Radio-Atilim-Stats-Setup-1.1.0.exe",
+            "Windows": "https://github.com/abes400/radio-atilim-stats/releases/download/1.1.0/Radio-Atilim-Stats-Setup.1.1.0.exe",
             "macOS": "https://github.com/abes400/radio-atilim-stats/releases/download/1.1.0/Radio-Atilim-Stats-1.1.0-universal.dmg"
         }
-
     }
 }
