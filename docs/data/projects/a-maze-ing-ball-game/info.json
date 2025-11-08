@@ -1,0 +1,62 @@
+{
+    "metadata": {
+        "name": "Amazeing Ball (Demo Available)",
+        "desc": "A simple strategy game where the player guides a ball through a rotatable maze."
+    },
+
+    "info": [
+        {
+            "type": "img",
+            "name": "logo.png",
+            "alt": "Logo of the game."
+        },
+        {
+            "type": "text",
+            "content": "<b>Amazeing Ball</b> is a simple strategy game where the player guides a ball through a rotatable maze."
+        },
+        {
+            "type":"text",
+            "content": "The main objective is to escort the ball to the finish point as fast as possible while collecting <b>stars</b> along the way. All levels need to be complete to beat the game."
+        },
+        {
+            "type": "list",
+            "title": "Controls",
+            "items": [
+                "<b>Arrow keys</b>: Rotate the Maze",
+                "<b>Esc</b>: Pause/Resume",
+                "<b>Mouse</b>: Navigation through the menus"
+            ]
+        },
+        {
+            "type":"text",
+            "content": "<br>"
+        },
+        {
+            "type": "img",
+            "name": "lvl7.png",
+            "alt": "Gameplay of Amazeing Ball."
+        },
+        {
+            "type": "img",
+            "name": "menu.png",
+            "alt": "Main Menu"
+        },
+        {
+            "type":"text",
+            "content": "<hr> <br>&#169; 2025 Flying Map Entertainment - Distributed under MIT license. <br> Concept based on Gravity Ball&trade; by LG R&D Labs, Russia <br> Made with Unity&reg; <br> Sound effects obtained from ZapSplat.com"
+        }
+    ],
+
+    "extras": {
+        "about": {
+            "techstack": ["Unity2D", "C#"],
+            "license": "MIT",
+            "version": "1.0 - DEMO"
+        },
+        "releases": {
+            "Windows": "https://github.com/abes400/a-maze-ing-ball-game/releases/download/Demo/Amazeing_Ball_1.0_Demo.exe",
+            "macOS": "https://github.com/abes400/a-maze-ing-ball-game/releases/download/Demo/Amazeing_Ball_1.0_Demo.dmg"
+        }
+
+    }
+}
