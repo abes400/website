@@ -1,4 +1,10 @@
 {
+    "pickerlock": {
+        "name": "Pickerlock",
+        "alt": "Thumbnail of Pickerlock on itch.io",
+        "desc": "A simple lock picking game made for 20 Second Game Jam 2025."
+    },
+
     "a-maze-ing-ball-game": {
         "name": "Amazeing Ball (Demo Available)",
         "alt": "Example Gameplay of Amazeing Ball",

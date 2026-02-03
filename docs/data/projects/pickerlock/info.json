@@ -1,0 +1,79 @@
+{
+    "metadata": {
+        "name": "Pickerlock",
+        "desc": "A simple lock picking game made for 20 Second Game Jam 2025."
+    },
+
+    "info": [
+        {
+            "type": "text",
+            "content": "You don't know how and when you decided to do so, but somehow, you found yourself enrolled in a <b>lock picking contest.</b> No prize, no praise, just <b>20 seconds</b> and <b>a chance to show off your speed</b>. There is one simple rule: <b>NO MISTAKES!</b> Otherwise, <b>you're out!</b>"
+        },
+        {
+            "type": "img",
+            "name": "gameplay.png",
+            "alt": "Gameplay of Pickerlock."
+        },
+        {
+            "type":"text",
+            "content": "<br>"
+        },
+        {
+            "type": "list",
+            "title": "Instructions",
+            "items": [
+                "You need to open as many locks as you can in <b>20 seconds</b>.",
+                "Open each lock by pressing <b>arrow keys</b> in the order given on screen.",
+                "As you crack each lock successfully, you will be given new ones.",
+                "But be careful! Once you make a wrong move, you will immediately be disqualified.",
+                "You can see your <b>high scores</b> on <b>difficulties</b> menu. Try to beat your record in each level of difficulties! Challenge yourself!"
+            ]
+        },
+        {
+            "type":"text",
+            "content": "<br>"
+        },
+        {
+            "type": "list",
+            "title": "Controls",
+            "items": [
+                "<b>Arrow Keys:</b> Pick the locks.",
+                "<b>Mouse:</b> Interact with menus"
+            ]
+        },
+        {
+            "type":"text",
+            "content": "<br>"
+        },
+        {
+            "type": "list",
+            "title": "3 Difficulty Modes!",
+            "items": [
+                "<b>Easy:</b> Each lock opens with <b>3</b> moves.",
+                "<b>Medium:</b> Each lock opens with <b>4</b> moves.",
+                "<b>Hard:</b> Each lock opens with <b>5</b> moves."
+            ]
+        },
+        {
+            "type":"text",
+            "content": "<br>"
+        },
+        {
+            "type":"text",
+            "content": "<hr> <br>&#169; 2025 - 2026 Flying Map Entertainment - Distributed under MIT license. <br> Made for 20 Second Game Jam 2025 <br> Made with Raylib 5.5 using C++. <br> Menu Music - \"Safe At Home\" by Marcelo Fernández (Licensed under CC-BY 4.0) <br> In-game Music: - \"A Journey Awaits\" by Pierre Bondoerffer"
+        }
+    ],
+
+    "extras": {
+        "about": {
+            "techstack": ["Raylib", "C++"],
+            "license": "MIT",
+            "version": "1.0"
+        },
+        "releases": {
+            "Windows": "https://github.com/abes400/pickerlock/releases/download/1.0/Install_Pickerlock_1.0.exe",
+            "macOS": "https://github.com/abes400/pickerlock/releases/download/1.0/Install_Pickerlock_1.0.dmg"
+        }
+
+    }
+}
