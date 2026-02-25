@@ -68,11 +68,11 @@
         "about": {
             "techstack": ["Raylib", "C++"],
             "license": "MIT",
-            "version": "1.0"
+            "version": "1.1"
         },
         "releases": {
-            "Windows": "https://github.com/abes400/pickerlock/releases/download/1.0/Install_Pickerlock_1.0.exe",
-            "macOS": "https://github.com/abes400/pickerlock/releases/download/1.0/Install_Pickerlock_1.0.dmg"
+            "Windows": "https://github.com/abes400/pickerlock/releases/download/1.1/Install_Pickerlock_1.1.exe",
+            "macOS": "https://github.com/abes400/pickerlock/releases/download/1.1/Install_Pickerlock_1.1.dmg"
         }
 
     }
